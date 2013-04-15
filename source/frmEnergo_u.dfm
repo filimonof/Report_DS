@@ -1,7 +1,7 @@
 inherited frmEnergo: TfrmEnergo
-  Left = 259
-  Top = 165
-  Width = 765
+  Left = 255
+  Top = 126
+  Width = 846
   Height = 467
   Caption = #1069#1083#1077#1082#1090#1088#1086#1101#1085#1077#1088#1075#1080#1103
   OldCreateOrder = True
@@ -10,11 +10,11 @@ inherited frmEnergo: TfrmEnergo
   PixelsPerInch = 96
   TextHeight = 13
   inherited sbarSimple: TTBXStatusBar
-    Top = 411
-    Width = 757
+    Top = 407
+    Width = 830
   end
   inherited TBXDock1: TTBXDock
-    Width = 757
+    Width = 830
     Height = 28
     object TBXToolbar1: TTBXToolbar
       Left = 0
@@ -60,7 +60,7 @@ inherited frmEnergo: TfrmEnergo
         OnClick = TBXItem2Click
       end
       object cbiMonth: TcxComboBox
-        Left = 41
+        Left = 46
         Top = 1
         Properties.DropDownListStyle = lsFixedList
         Properties.DropDownRows = 12
@@ -78,7 +78,7 @@ inherited frmEnergo: TfrmEnergo
         Width = 98
       end
       object seiYear: TcxSpinEdit
-        Left = 168
+        Left = 173
         Top = 1
         Properties.OnChange = TBXItem1Click
         Style.LookAndFeel.Kind = lfOffice11
@@ -95,23 +95,23 @@ inherited frmEnergo: TfrmEnergo
     end
   end
   inherited TBXDock2: TTBXDock
-    Top = 402
-    Width = 757
+    Top = 398
+    Width = 830
   end
   inherited TBXDock3: TTBXDock
     Top = 28
-    Height = 374
+    Height = 370
   end
   inherited TBXDock4: TTBXDock
-    Left = 748
+    Left = 821
     Top = 28
-    Height = 374
+    Height = 370
   end
   object cxPageControl1: TcxPageControl [5]
     Left = 9
     Top = 28
-    Width = 739
-    Height = 374
+    Width = 812
+    Height = 370
     ActivePage = cxTabSheet1
     Align = alClient
     HotTrack = True
@@ -119,8 +119,8 @@ inherited frmEnergo: TfrmEnergo
     LookAndFeel.NativeStyle = False
     MultiLine = True
     TabOrder = 5
-    ClientRectBottom = 374
-    ClientRectRight = 739
+    ClientRectBottom = 370
+    ClientRectRight = 812
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = '   '#1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1077' '#1079#1085#1072#1095#1077#1085#1080#1103'  '
@@ -128,8 +128,8 @@ inherited frmEnergo: TfrmEnergo
       object cxGrid2: TcxGrid
         Left = 0
         Top = 25
-        Width = 739
-        Height = 325
+        Width = 812
+        Height = 321
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfOffice11
@@ -205,6 +205,10 @@ inherited frmEnergo: TfrmEnergo
             end
             item
               Caption = #1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
+              Width = 140
+            end
+            item
+              Caption = #1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
               Width = 140
             end
             item
@@ -294,7 +298,7 @@ inherited frmEnergo: TfrmEnergo
             Caption = #1056#1103#1079#1072#1085#1100
             DataBinding.FieldName = 'per_ryazan'
             Width = 27
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 0
             Position.RowIndex = 0
           end
@@ -302,7 +306,7 @@ inherited frmEnergo: TfrmEnergo
             Caption = #1055#1077#1085#1079#1072
             DataBinding.FieldName = 'per_penza'
             Width = 20
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 2
             Position.RowIndex = 0
           end
@@ -310,7 +314,7 @@ inherited frmEnergo: TfrmEnergo
             Caption = #1059#1083#1100#1103#1085#1086#1074#1089#1082
             DataBinding.FieldName = 'per_ylyan'
             Width = 20
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 1
             Position.RowIndex = 0
           end
@@ -318,7 +322,7 @@ inherited frmEnergo: TfrmEnergo
             Caption = #1063#1091#1074#1072#1096#1080
             DataBinding.FieldName = 'per_chuv'
             Width = 20
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 3
             Position.RowIndex = 0
           end
@@ -326,7 +330,7 @@ inherited frmEnergo: TfrmEnergo
             Caption = #1053#1080#1078#1085#1086#1074#1075#1086#1088#1086#1076
             DataBinding.FieldName = 'per_nnov'
             Width = 20
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 4
             Position.RowIndex = 0
           end
@@ -335,7 +339,7 @@ inherited frmEnergo: TfrmEnergo
             DataBinding.FieldName = 'it_vyr'
             Options.Editing = False
             Width = 46
-            Position.BandIndex = 6
+            Position.BandIndex = 7
             Position.ColIndex = 1
             Position.RowIndex = 0
           end
@@ -344,7 +348,7 @@ inherited frmEnergo: TfrmEnergo
             DataBinding.FieldName = 'it_potr'
             Options.Editing = False
             Width = 53
-            Position.BandIndex = 6
+            Position.BandIndex = 7
             Position.ColIndex = 0
             Position.RowIndex = 0
           end
@@ -353,8 +357,22 @@ inherited frmEnergo: TfrmEnergo
             DataBinding.FieldName = 'it_sal'
             Options.Editing = False
             Width = 47
-            Position.BandIndex = 6
+            Position.BandIndex = 7
             Position.ColIndex = 2
+            Position.RowIndex = 0
+          end
+          object cxGrid2DBBandedTableView1tecYA_v: TcxGridDBBandedColumn
+            Caption = #1042#1099#1088#1072#1073#1086#1090#1082#1072
+            DataBinding.FieldName = 'tecYA_v'
+            Position.BandIndex = 5
+            Position.ColIndex = 0
+            Position.RowIndex = 0
+          end
+          object cxGrid2DBBandedTableView1tecYA_sn: TcxGridDBBandedColumn
+            Caption = #1057#1086#1073'. '#1085#1091#1078#1076#1099
+            DataBinding.FieldName = 'tecYA_sn'
+            Position.BandIndex = 5
+            Position.ColIndex = 1
             Position.RowIndex = 0
           end
         end
@@ -365,7 +383,7 @@ inherited frmEnergo: TfrmEnergo
       object TBXDock6: TTBXDock
         Left = 0
         Top = 0
-        Width = 739
+        Width = 812
         Height = 25
         object TBXToolWindow1: TTBXToolWindow
           Left = 0
@@ -373,7 +391,7 @@ inherited frmEnergo: TfrmEnergo
           Caption = 'TBXToolWindow1'
           CloseButton = False
           ClientAreaHeight = 21
-          ClientAreaWidth = 729
+          ClientAreaWidth = 802
           DockableTo = [dpTop]
           DockMode = dmCannotFloat
           FullSize = True
@@ -406,8 +424,8 @@ inherited frmEnergo: TfrmEnergo
       object cxGrid1: TcxGrid
         Left = 0
         Top = 28
-        Width = 739
-        Height = 272
+        Width = 812
+        Height = 268
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfOffice11
@@ -488,6 +506,9 @@ inherited frmEnergo: TfrmEnergo
               Width = 111
             end
             item
+              Caption = #1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
+            end
+            item
               Caption = #1054#1073#1097#1077#1077
               Width = 110
             end>
@@ -552,13 +573,25 @@ inherited frmEnergo: TfrmEnergo
           end
           object cxGrid1DBBandedTableView1koef_p: TcxGridDBBandedColumn
             DataBinding.FieldName = 'koef_p'
-            Position.BandIndex = 5
+            Position.BandIndex = 6
             Position.ColIndex = 0
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1value_p: TcxGridDBBandedColumn
             DataBinding.FieldName = 'value_p'
             Options.Editing = False
+            Position.BandIndex = 6
+            Position.ColIndex = 1
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1koef_v_tecYA: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'koef_v_tecYA'
+            Position.BandIndex = 5
+            Position.ColIndex = 0
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1value_v_tecYA: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'value_v_tecYA'
             Position.BandIndex = 5
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -570,8 +603,8 @@ inherited frmEnergo: TfrmEnergo
       end
       object TBXDock5: TTBXDock
         Left = 0
-        Top = 300
-        Width = 739
+        Top = 296
+        Width = 812
         Height = 50
         Position = dpBottom
         object TBXToolbar2: TTBXToolbar
@@ -615,8 +648,16 @@ inherited frmEnergo: TfrmEnergo
           object TBControlItem12: TTBControlItem
             Control = seVyrMorcem
           end
+          object TBXSeparatorItem7: TTBXSeparatorItem
+          end
+          object TBXLabelItem15: TTBXLabelItem
+            Caption = ' '#1071#1074#1072#1089#1089#1082#1072#1103
+          end
+          object TBControlItem13: TTBControlItem
+            Control = seVyrYavas
+          end
           object seVyrTEC2: TcxSpinEdit
-            Left = 100
+            Left = 107
             Top = 0
             Properties.ValueType = vtFloat
             Properties.OnChange = cxSpinEdit1PropertiesChange
@@ -632,7 +673,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 80
           end
           object seVyrTEC4: TcxSpinEdit
-            Left = 359
+            Left = 372
             Top = 0
             Properties.ValueType = vtFloat
             Properties.OnChange = seVyrTEC4PropertiesChange
@@ -648,7 +689,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 80
           end
           object seVyrTECGT: TcxSpinEdit
-            Left = 232
+            Left = 242
             Top = 0
             Properties.ValueType = vtFloat
             Properties.OnChange = seVyrTECGTPropertiesChange
@@ -664,7 +705,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 80
           end
           object seVyrMorcem: TcxSpinEdit
-            Left = 524
+            Left = 546
             Top = 0
             Properties.ValueType = vtFloat
             Properties.OnChange = seVyrMorcemPropertiesChange
@@ -677,6 +718,22 @@ inherited frmEnergo: TfrmEnergo
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             TabOrder = 3
+            Width = 80
+          end
+          object seVyrYavas: TcxSpinEdit
+            Left = 685
+            Top = 0
+            Properties.ValueType = vtFloat
+            Properties.OnChange = seVyrYavasPropertiesChange
+            Style.LookAndFeel.Kind = lfOffice11
+            Style.LookAndFeel.NativeStyle = False
+            StyleDisabled.LookAndFeel.Kind = lfOffice11
+            StyleDisabled.LookAndFeel.NativeStyle = False
+            StyleFocused.LookAndFeel.Kind = lfOffice11
+            StyleFocused.LookAndFeel.NativeStyle = False
+            StyleHot.LookAndFeel.Kind = lfOffice11
+            StyleHot.LookAndFeel.NativeStyle = False
+            TabOrder = 4
             Width = 80
           end
         end
@@ -709,7 +766,7 @@ inherited frmEnergo: TfrmEnergo
           object TBXSeparatorItem5: TTBXSeparatorItem
           end
           object sePotr: TcxSpinEdit
-            Left = 101
+            Left = 108
             Top = 0
             Properties.ValueType = vtFloat
             Properties.OnChange = sePotrPropertiesChange
@@ -725,7 +782,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 80
           end
           object teSaldo: TcxTextEdit
-            Left = 283
+            Left = 294
             Top = 0
             Properties.ReadOnly = True
             Style.LookAndFeel.Kind = lfOffice11
@@ -744,7 +801,7 @@ inherited frmEnergo: TfrmEnergo
       object TBXDock7: TTBXDock
         Left = 0
         Top = 0
-        Width = 739
+        Width = 812
         Height = 28
         object tbOK: TTBXToolbar
           Left = 0
@@ -792,7 +849,7 @@ inherited frmEnergo: TfrmEnergo
             OnClick = TBXItem3Click
           end
           object cbTypeData: TcxComboBox
-            Left = 172
+            Left = 176
             Top = 1
             Properties.DropDownListStyle = lsFixedList
             Properties.DropDownRows = 5
@@ -801,6 +858,7 @@ inherited frmEnergo: TfrmEnergo
               #1050#1074' '#1043#1058' '#1058#1069#1062
               #1050#1074' '#1058#1069#1062'-4'
               #1050#1074' '#1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
+              #1050#1074' '#1071#1074#1072#1089#1089#1082#1072#1103
               #1050#1087' '#1054#1073#1097#1077#1077)
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
@@ -814,7 +872,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 92
           end
           object cbDay1: TcxComboBox
-            Left = 12
+            Left = 13
             Top = 1
             Properties.DropDownListStyle = lsFixedList
             Style.LookAndFeel.Kind = lfOffice11
@@ -829,7 +887,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 62
           end
           object cbDay2: TcxComboBox
-            Left = 90
+            Left = 93
             Top = 1
             Properties.DropDownListStyle = lsFixedList
             Style.LookAndFeel.Kind = lfOffice11
@@ -844,7 +902,7 @@ inherited frmEnergo: TfrmEnergo
             Width = 63
           end
           object teValue: TcxSpinEdit
-            Left = 306
+            Left = 311
             Top = 1
             Properties.ValueType = vtFloat
             Style.LookAndFeel.Kind = lfOffice11
@@ -942,6 +1000,15 @@ inherited frmEnergo: TfrmEnergo
       DisplayLabel = #1042#1099#1088#1072#1073#1086#1090#1082#1072
       FieldName = 'value_v_morcem'
     end
+    object adsEnergoPlankoef_v_tecYA: TFloatField
+      DisplayLabel = #1050#1074
+      FieldName = 'koef_v_tecYA'
+      OnChange = adsEnergoPlankoef_v_tecYAChange
+    end
+    object adsEnergoPlanvalue_v_tecYA: TFloatField
+      DisplayLabel = #1042#1099#1088#1072#1073#1086#1090#1082#1072
+      FieldName = 'value_v_tecYA'
+    end
   end
   object adsEnergoFact: TADODataSet
     Connection = dmData.adcData
@@ -1022,6 +1089,12 @@ inherited frmEnergo: TfrmEnergo
     object adsEnergoFactmorcem_sn: TFloatField
       FieldName = 'morcem_sn'
     end
+    object adsEnergoFacttecYA_v: TFloatField
+      FieldName = 'tecYA_v'
+    end
+    object adsEnergoFacttecYA_sn: TFloatField
+      FieldName = 'tecYA_sn'
+    end
   end
   object dsEnergoFact: TDataSource
     DataSet = adsEnergoFact
@@ -1072,6 +1145,10 @@ inherited frmEnergo: TfrmEnergo
     object adsPlanParamparam_v_morcem: TFloatField
       DisplayLabel = #1042#1099#1088#1072#1073#1086#1090#1082#1072' '#1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
       FieldName = 'param_v_morcem'
+    end
+    object adsPlanParamparam_v_tecYA: TFloatField
+      DisplayLabel = #1042#1099#1088#1072#1073#1086#1090#1082#1072' '#1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
+      FieldName = 'param_v_tecYA'
     end
   end
 end

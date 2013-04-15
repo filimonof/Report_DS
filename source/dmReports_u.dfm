@@ -1,8 +1,8 @@
 object dmReports: TdmReports
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 367
-  Top = 209
+  Left = 228
+  Top = 146
   Height = 584
   Width = 679
   object frReport: TfrReport
@@ -408,79 +408,6 @@ object dmReports: TdmReports
     Left = 536
     Top = 40
   end
-  object adsKomandARM: TADODataSet
-    Connection = dmData.adcComandARM
-    CursorType = ctStatic
-    CommandText = 
-      'SELECT Records.RecID, Records.Reg_time, Objects.Object_name, Com' +
-      'mands.Command, Records.Ext_initiative, Records.From_minute, Reco' +
-      'rds.To_minute, Cause.description, Records.Extended_cause, Record' +
-      's.Surname, Records.Value'#13#10' FROM Participants INNER JOIN (Objects' +
-      ' INNER JOIN (Commands INNER JOIN ((Cause INNER JOIN Extend_cause' +
-      ' ON Cause.CauseID = Extend_cause.Cause) INNER JOIN Records ON Ca' +
-      'use.CauseID = Records.Cause) ON Commands.CommandID = Records.Com' +
-      'mand) ON Objects.CodeID = Records.Object) ON Participants.Partic' +
-      'ipantID = Objects.Participant'
-    Parameters = <>
-    Prepared = True
-    Left = 280
-    Top = 312
-    object adsKomandARMRecID: TAutoIncField
-      DisplayLabel = 'ID'
-      FieldName = 'RecID'
-      ReadOnly = True
-    end
-    object adsKomandARMReg_time: TDateTimeField
-      DisplayLabel = #1042#1088#1077#1084#1103' '#1086#1090#1076#1072#1095#1080' '#1082#1086#1084#1072#1085#1076#1099
-      FieldName = 'Reg_time'
-    end
-    object adsKomandARMObject_name: TWideStringField
-      DisplayLabel = #1054#1073#1098#1077#1082#1090' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103
-      FieldName = 'Object_name'
-      Size = 50
-    end
-    object adsKomandARMCommand: TWideStringField
-      DisplayLabel = #1050#1086#1084#1072#1085#1076#1072
-      FieldName = 'Command'
-      Size = 255
-    end
-    object adsKomandARMExt_initiative: TBooleanField
-      DisplayLabel = #1048#1085#1080#1094#1080#1072#1090#1080#1074#1072
-      FieldName = 'Ext_initiative'
-    end
-    object adsKomandARMFrom_minute: TDateTimeField
-      DisplayLabel = #1042#1088#1077#1084#1103' '#1085#1072#1095#1072#1083#1072
-      FieldName = 'From_minute'
-    end
-    object adsKomandARMTo_minute: TDateTimeField
-      DisplayLabel = #1042#1099#1087#1086#1083#1085#1080#1090#1100' '#1082
-      FieldName = 'To_minute'
-    end
-    object adsKomandARMdescription: TWideStringField
-      DisplayLabel = #1055#1088#1080#1095#1080#1085#1072
-      FieldName = 'description'
-      Size = 255
-    end
-    object adsKomandARMExtended_cause: TWideStringField
-      DisplayLabel = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1072#1103' '#1087#1088#1080#1095#1080#1085#1072
-      FieldName = 'Extended_cause'
-      Size = 255
-    end
-    object adsKomandARMSurname: TWideStringField
-      DisplayLabel = #1044#1077#1078#1091#1088#1085#1099#1081' '#1076#1080#1089#1087#1077#1090#1095#1077#1088
-      FieldName = 'Surname'
-      Size = 50
-    end
-    object adsKomandARMValue: TIntegerField
-      DisplayLabel = #1047#1085#1072#1095#1077#1085#1080#1077
-      FieldName = 'Value'
-    end
-  end
-  object frKomandARM: TfrDBDataSet
-    DataSet = adsKomandARM
-    Left = 280
-    Top = 360
-  end
   object cdsAOEO: TClientDataSet
     Active = True
     Aggregates = <>
@@ -667,8 +594,8 @@ object dmReports: TdmReports
   end
   object frNarushPoryd: TfrDBDataSet
     DataSet = adsNarushPoryd
-    Left = 48
-    Top = 472
+    Left = 264
+    Top = 360
   end
   object adsNarushPoryd: TADODataSet
     Connection = dmData.adcData
@@ -676,7 +603,7 @@ object dmReports: TdmReports
     CommandType = cmdTableDirect
     Parameters = <>
     Prepared = True
-    Left = 48
-    Top = 424
+    Left = 264
+    Top = 312
   end
 end

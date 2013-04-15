@@ -2,8 +2,8 @@ object dmData: TdmData
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Left = 704
-  Top = 435
+  Left = 433
+  Top = 321
   Height = 176
   Width = 293
   object adcData: TADOConnection

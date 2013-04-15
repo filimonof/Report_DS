@@ -1,6 +1,6 @@
 inherited frmGaz: TfrmGaz
-  Left = 280
-  Top = 319
+  Left = 176
+  Top = 237
   Width = 572
   Caption = #1043#1072#1079
   OldCreateOrder = True
@@ -9,10 +9,10 @@ inherited frmGaz: TfrmGaz
   PixelsPerInch = 96
   TextHeight = 13
   inherited sbarSimple: TTBXStatusBar
-    Width = 564
+    Width = 556
   end
   inherited TBXDock1: TTBXDock
-    Width = 564
+    Width = 556
     Height = 28
     object TBXToolbar1: TTBXToolbar
       Left = 0
@@ -56,7 +56,7 @@ inherited frmGaz: TfrmGaz
         OnClick = TBXItem2Click
       end
       object cbiMonth: TcxComboBox
-        Left = 41
+        Left = 46
         Top = 1
         Properties.DropDownListStyle = lsFixedList
         Properties.DropDownRows = 12
@@ -69,7 +69,7 @@ inherited frmGaz: TfrmGaz
         Width = 98
       end
       object seiYear: TcxSpinEdit
-        Left = 168
+        Left = 173
         Top = 1
         Properties.OnChange = TBXItem1Click
         Style.LookAndFeel.Kind = lfOffice11
@@ -82,29 +82,29 @@ inherited frmGaz: TfrmGaz
     end
   end
   inherited TBXDock2: TTBXDock
-    Width = 564
+    Width = 556
   end
   inherited TBXDock3: TTBXDock
     Top = 28
-    Height = 254
+    Height = 250
   end
   inherited TBXDock4: TTBXDock
-    Left = 555
+    Left = 547
     Top = 28
-    Height = 254
+    Height = 250
   end
   object cxPageControl1: TcxPageControl [5]
     Left = 9
     Top = 28
-    Width = 546
-    Height = 254
+    Width = 538
+    Height = 250
     ActivePage = cxTabSheet1
     Align = alClient
     LookAndFeel.Kind = lfOffice11
     LookAndFeel.NativeStyle = False
     TabOrder = 5
-    ClientRectBottom = 254
-    ClientRectRight = 546
+    ClientRectBottom = 250
+    ClientRectRight = 538
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = ' '#1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1077' '#1079#1085#1072#1095#1077#1085#1080#1103' '
@@ -112,8 +112,8 @@ inherited frmGaz: TfrmGaz
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
-        Width = 546
-        Height = 230
+        Width = 538
+        Height = 226
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfOffice11
@@ -163,7 +163,13 @@ inherited frmGaz: TfrmGaz
             Width = 114
           end
           object cxGrid1DBTableView1DBColumn4: TcxGridDBColumn
+            Caption = #1062#1050' G'
             DataBinding.FieldName = 'kc'
+            Width = 112
+          end
+          object cxGrid1DBTableView1Column1: TcxGridDBColumn
+            Caption = #1062#1050' '#1051#1080#1084#1080#1090
+            DataBinding.FieldName = 'kc_p'
             Width = 112
           end
           object cxGrid1DBTableView1DBColumn5: TcxGridDBColumn
@@ -183,13 +189,13 @@ inherited frmGaz: TfrmGaz
       object TBXDock5: TTBXDock
         Left = 0
         Top = 0
-        Width = 546
+        Width = 538
         Height = 9
       end
       object TBXDock6: TTBXDock
         Left = 0
-        Top = 202
-        Width = 546
+        Top = 198
+        Width = 538
         Height = 28
         Position = dpBottom
         object TBXToolbar2: TTBXToolbar
@@ -232,19 +238,19 @@ inherited frmGaz: TfrmGaz
         end
       end
       object cxSplitter1: TcxSplitter
-        Left = 326
+        Left = 318
         Top = 9
         Width = 8
-        Height = 193
+        Height = 189
         HotZoneClassName = 'TcxMediaPlayer9Style'
         AlignSplitter = salRight
         Control = cxGrid2
       end
       object cxGrid2: TcxGrid
-        Left = 334
+        Left = 326
         Top = 9
         Width = 212
-        Height = 193
+        Height = 189
         Align = alRight
         TabOrder = 3
         LookAndFeel.Kind = lfOffice11
@@ -328,8 +334,8 @@ inherited frmGaz: TfrmGaz
       object cxGrid3: TcxGrid
         Left = 0
         Top = 9
-        Width = 326
-        Height = 193
+        Width = 318
+        Height = 189
         Align = alClient
         TabOrder = 4
         LookAndFeel.Kind = lfOffice11
@@ -606,6 +612,9 @@ inherited frmGaz: TfrmGaz
       FieldKind = fkCalculated
       FieldName = 'itItog'
       Calculated = True
+    end
+    object adsFactValuekc_p: TFloatField
+      FieldName = 'kc_p'
     end
   end
   object dsFactValue: TDataSource

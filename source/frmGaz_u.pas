@@ -95,6 +95,8 @@ type
     TBXItem5: TTBXItem;
     TBXItem4: TTBXItem;
     TBXItem3: TTBXItem;
+    adsFactValuekc_p: TFloatField;
+    cxGrid1DBTableView1Column1: TcxGridDBColumn;
     procedure FormCreate(Sender: TObject);
     procedure TBXItem1Click(Sender: TObject);
     procedure TBXItem2Click(Sender: TObject);

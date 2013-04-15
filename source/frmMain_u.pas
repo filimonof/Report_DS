@@ -109,6 +109,11 @@ type
     nbMainItem18: TdxNavBarItem;
     aTEC_4: TAction;
     nbMainItem19: TdxNavBarItem;
+    aTEC_YA: TAction;
+    nbMainItem22: TdxNavBarItem;
+    TBXItem26: TTBXItem;
+    TBXItem27: TTBXItem;
+    TBXItem28: TTBXItem;
     procedure FormCreate(Sender: TObject);
     procedure aExecute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -296,7 +301,11 @@ begin
   else if TAction(Sender).Name = 'aTEC_4' then
   begin
     ShowSimpleForm('TfrmTEC_4');
-  end             
+  end
+  else if TAction(Sender).Name = 'aTEC_YA' then
+  begin
+    ShowSimpleForm('TfrmTEC_YA');
+  end
 
 end;
 
@@ -403,6 +412,80 @@ begin
 
 // begin СВОДНЫЕ ДАННЫЕ
 
+    // из ОИК  генерация подстанций
+    frVariables['frOIKPlanMinTec2']:='0';
+    frVariables['frOIKPlanMaxTec2']:='0';
+    frVariables['frOIKFactTec2']:='0';
+    frVariables['frOIKPlanMinTecGT']:='0';
+    frVariables['frOIKPlanMaxTecGT']:='0';
+    frVariables['frOIKFactTecGT']:='0';
+    frVariables['frOIKPlanMinTecMC']:='0';
+    frVariables['frOIKPlanMaxTecMC']:='0';
+    frVariables['frOIKFactTecMC']:='0';
+    frVariables['frOIKPlanMinTec4']:='0';
+    frVariables['frOIKPlanMaxTec4']:='0';
+    frVariables['frOIKFactTec4']:='0';
+    frVariables['frOIKPlanMinTecYa']:='0';
+    frVariables['frOIKPlanMaxTecYa']:='0';
+    frVariables['frOIKFactTecYa']:='0';
+    frVariables['frOIKFactSumm']:='0';
+
+
+    if mServersCK[1].Pclass.Connected then
+    try
+      SetLength(tiTIMany, 16);
+      tiTIMany[0]:=tiOIKPlanMinTec2;
+      tiTIMany[1]:=tiOIKPlanMaxTec2;
+      tiTIMany[2]:=tiOIKFactTec2;
+      tiTIMany[3]:=tiOIKPlanMinTecGT;
+      tiTIMany[4]:=tiOIKPlanMaxTecGT;
+      tiTIMany[5]:=tiOIKFactTecGT;
+      tiTIMany[6]:=tiOIKPlanMinTecMC;
+      tiTIMany[7]:=tiOIKPlanMaxTecMC;
+      tiTIMany[8]:=tiOIKFactTecMC;
+      tiTIMany[9]:=tiOIKPlanMinTec4;
+      tiTIMany[10]:=tiOIKPlanMaxTec4;
+      tiTIMany[11]:=tiOIKFactTec4;
+      tiTIMany[12]:=tiOIKPlanMinTecYa;
+      tiTIMany[13]:=tiOIKPlanMaxTecYa;
+      tiTIMany[14]:=tiOIKFactTecYa;
+      tiTIMany[15]:=tiOIKFactSumm;
+
+      atiResMany := mServersCK[1].Pclass.GetArrayValueTI_Sync(tiTIMany,ckTI24,date1);
+      RoundArray(atiResMany,0);
+
+      arrStr := GetMinAndHour(atiResMany);
+      frVariables['frOIKPlanMinTec2']:=arrStr[0];
+      frVariables['frOIKFactMinTec2']:=arrStr[2];
+      frVariables['frOIKPlanMinTecGT']:=arrStr[3];
+      frVariables['frOIKFactMinTecGT']:=arrStr[5];
+      frVariables['frOIKPlanMinTecMC']:=arrStr[6];
+      frVariables['frOIKFactMinTecMC']:=arrStr[8];
+      frVariables['frOIKPlanMinTec4']:=arrStr[9];
+      frVariables['frOIKFactMinTec4']:=arrStr[11];
+      frVariables['frOIKPlanMinTecYa']:=arrStr[12];
+      frVariables['frOIKFactMinTecYa']:=arrStr[14];
+      frVariables['frOIKFactMinSumm']:=arrStr[15];
+      arrStr := nil;
+
+      arrStr := GetMaxAndHour(atiResMany);
+      frVariables['frOIKPlanMaxTec2']:=arrStr[0];
+      frVariables['frOIKFactMaxTec2']:=arrStr[2];
+      frVariables['frOIKPlanMaxTecGT']:=arrStr[3];
+      frVariables['frOIKFactMaxTecGT']:=arrStr[5];
+      frVariables['frOIKPlanMaxTecMC']:=arrStr[6];
+      frVariables['frOIKFactMaxTecMC']:=arrStr[8];
+      frVariables['frOIKPlanMaxTec4']:=arrStr[9];
+      frVariables['frOIKFactMaxTec4']:=arrStr[11];
+      frVariables['frOIKPlanMaxTecYa']:=arrStr[12];
+      frVariables['frOIKFactMaxTecYa']:=arrStr[14];
+      frVariables['frOIKFactMaxSumm']:=arrStr[15];
+      arrStr := nil;
+
+   finally
+     tiTIMany := nil;
+     atiResMany := nil;
+   end;
 
     // из ОИК  столбец ППБР
     // за день
@@ -481,7 +564,7 @@ begin
 
 
   // электроэнергия
-    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(value_v_tec2) as sumtec2, sum(value_v_tec3) as sumtec3, sum(value_v_tecGT) as sumtecGT, sum(value_v_morcem) as sumtecMC, sum(value_v_tec4) as sumtec4, sum(value_p) as sumpotr '
+    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(value_v_tec2) as sumtec2, sum(value_v_tec3) as sumtec3, sum(value_v_tecGT) as sumtecGT, sum(value_v_morcem) as sumtecMC, sum(value_v_tec4) as sumtec4, sum(value_p) as sumpotr, sum(value_v_tecYA) as sumtecYA '
       +' FROM ePlanValue '
       +' WHERE (((date)='+DateToAccssSQLStr(date1)+')) '
     );
@@ -491,11 +574,13 @@ begin
       frVariables['frSVEnPlanTECGT']:=aq.FieldByName('sumtecGT').AsFloat;      
       frVariables['frSVEnPlanTEC4']:=aq.FieldByName('sumtec4').AsFloat;
       frVariables['frSVEnPlanTECMC']:=aq.FieldByName('sumtecMC').AsFloat;
+      frVariables['frSVEnPlanTECYA']:=aq.FieldByName('sumtecYA').AsFloat;      
       frVariables['frSVEnPlanPotr']:=aq.FieldByName('sumpotr').AsFloat;
     finally
       aq.Free;
-    end;    
+    end;
 
+    {
     aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(value_v_tec2) as sumtec2, sum(value_v_tec3) as sumtec3, sum(value_v_tecGT) as sumtecGT, sum(value_v_morcem) as sumtecMC, sum(value_v_tec4) as sumtec4, sum(value_p) as sumpotr  '
       +' FROM ePlanValue '
       +' WHERE (((date)<='+DateToAccssSQLStr(date1)+')) and (((date)>='+DateToAccssSQLStr(date1BeginMonth)+'))'
@@ -503,15 +588,17 @@ begin
     try
       frVariables['frSVEnPlan2TEC2']:=aq.FieldByName('sumtec2').AsFloat;
       frVariables['frSVEnPlan2TEC3']:=aq.FieldByName('sumtec3').AsFloat;
-      frVariables['frSVEnPlan2TECGT']:=aq.FieldByName('sumtecGT').AsFloat;      
+      frVariables['frSVEnPlan2TECGT']:=aq.FieldByName('sumtecGT').AsFloat;
       frVariables['frSVEnPlan2TEC4']:=aq.FieldByName('sumtec4').AsFloat;
       frVariables['frSVEnPlan2TECMC']:=aq.FieldByName('sumtecMC').AsFloat;
       frVariables['frSVEnPlan2Potr']:=aq.FieldByName('sumpotr').AsFloat;
     finally
       aq.Free;
-    end;    
+    end;
+    }
 
-    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2_v) as sumtec2, sum(tec3_v) as sumtec3, sum(tecGT_v) as sumtecGT, sum(morcem_v) as sumtecMC, sum(tec4_v) as sumtec4, sum(tec2_v+tecGT_v+morcem_v+tec4_v+per_ryazan+per_penza+per_ylyan+per_chuv+per_nnov) as sumpotr '
+    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2_v-tec2_sn) as sumtec2, sum(tec3_v-tec3_sn) as sumtec3, sum(tecGT_v-tecGT_sn) as sumtecGT, sum(morcem_v-morcem_sn) as sumtecMC, sum(tec4_v-tec4_sn) as sumtec4, sum(tecYA_v-tecYA_sn) as sumtecYA '
+      + ' , sum(tec2_v+tecGT_v+morcem_v+tec4_v+tecYA_v+per_ryazan+per_penza+per_ylyan+per_chuv+per_nnov) as sumpotr '
       +' FROM eFactValue '
       +' WHERE (((date)='+DateToAccssSQLStr(date1)+')) '
     );
@@ -521,11 +608,13 @@ begin
       frVariables['frSVEnFactTECGT']:=aq.FieldByName('sumtecGT').AsFloat;      
       frVariables['frSVEnFactTEC4']:=aq.FieldByName('sumtec4').AsFloat;
       frVariables['frSVEnFactTECMC']:=aq.FieldByName('sumtecMC').AsFloat;
+      frVariables['frSVEnFactTECYA']:=aq.FieldByName('sumtecYA').AsFloat;      
       frVariables['frSVEnFactPotr']:=aq.FieldByName('sumpotr').AsFloat;
     finally
       aq.Free;
     end;
 
+    {
     aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2_v) as sumtec2, sum(tec3_v) as sumtec3, sum(tecGT_v) as sumtecGT, sum(morcem_v) as sumtecMC, sum(tec4_v) as sumtec4, sum(tec2_v+tecGT_v+morcem_v+tec4_v+per_ryazan+per_penza+per_ylyan+per_chuv+per_nnov) as sumpotr '
       +' FROM eFactValue '
       +' WHERE (((date)<='+DateToAccssSQLStr(date1)+')) and (((date)>='+DateToAccssSQLStr(date1BeginMonth)+'))'
@@ -540,6 +629,7 @@ begin
     finally
       aq.Free;
     end;
+    }
 
   //тепло
     aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2_par+tec2_voda+tec3_par+tec3_voda+ck_par+ck_voda) as ssum '
@@ -801,19 +891,20 @@ begin
 // end НАЛИЧИЕ МАЗУТА
 
 // begin ГАЗ
-    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2) as ssum2, sum(tec3) as ssum3, sum(kc) as ssumkc '
+    aq:=SelectQuerySimple(dmData.adcData,' SELECT  sum(tec2) as ssum2, sum(tec3) as ssum3, sum(kc) as ssumkc, sum(kc_p) as ssumkc_p '
       +' FROM gFactValue '
       +' WHERE (((date)='+DateToAccssSQLStr(date1)+')) '
     );
     try
       frVariables['frGazRashFactDayTEC2']:=aq.FieldByName('ssum2').AsFloat;
       frVariables['frGazRashFactDayKC']:=aq.FieldByName('ssumkc').AsFloat;
+      frVariables['frGazRashFactDayKCp']:=aq.FieldByName('ssumkc_p').AsFloat;
       frVariables['frGazRashFactDayTEC3']:=aq.FieldByName('ssum3').AsFloat;
     finally
       aq.Free;
     end;
 
-    aq:=SelectQuerySimple(dmData.adcData,' SELECT sum(tec2) as ssum2, sum(tec3) as ssum3, sum(kc) as ssumkc '
+    aq:=SelectQuerySimple(dmData.adcData,' SELECT sum(tec2) as ssum2, sum(tec3) as ssum3, sum(kc) as ssumkc, sum(kc_p) as ssumkc_p  '
       +' FROM gFactValue '
       +' WHERE (((date)<='+DateToAccssSQLStr(date1)+')) and (((date)>='+DateToAccssSQLStr(date1BeginMonth)+'))'
     );
@@ -821,6 +912,7 @@ begin
       frVariables['frGazRashFactMonthTEC2']:=aq.FieldByName('ssum2').AsFloat;
       frVariables['frGazRashFactMonthTEC3']:=aq.FieldByName('ssum3').AsFloat;
       frVariables['frGazRashFactMonthKC']:=aq.FieldByName('ssumkc').AsFloat;
+      frVariables['frGazRashFactMonthKCp']:=aq.FieldByName('ssumkc_p').AsFloat;      
     finally
       aq.Free;
     end;
@@ -940,6 +1032,7 @@ begin
     );
     try
       frVariables['frTEC4g1']:=aq.FieldByName('g1').AsString;
+      frVariables['frTEC4g2']:=aq.FieldByName('g2').AsString;      
       frVariables['frTEC4gen']:=aq.FieldByName('gen').AsString;
       frVariables['frTEC4gaz_g']:=aq.FieldByName('gaz_g').AsString;
       frVariables['frTEC4gaz_p']:=aq.FieldByName('gaz_p').AsString;
@@ -947,6 +1040,20 @@ begin
       aq.Free;
     end;
 // end ТЭЦ 4 на 6.00
+
+// begin ГТЭС Явасская на 6.00
+    aq:=SelectQuerySimple(dmData.adcData,' SELECT  *  FROM tec_YA '
+      +' WHERE (date='+DateToAccssSQLStr(IncDay(date1))+')'
+    );
+    try
+      frVariables['frTECYAg1']:=aq.FieldByName('g1').AsString;
+      frVariables['frTECYAg2']:=aq.FieldByName('g2').AsString;
+      frVariables['frTECYAgen']:=aq.FieldByName('gen').AsString;
+    finally
+      aq.Free;
+    end;
+// end ГТЭС Явасская на 6.00
+
 
 // begin Уровень напряжения в контрольных точках Мордовской энергосистемы 110
     aq:=SelectQuerySimple(dmData.adcData,' SELECT  PSSaransk,PSRuzaevka, PSMoksha, PSKomsomolsk, PStec2 '
@@ -1142,6 +1249,7 @@ begin
 // end теплотехническое оборудование
 
 //begin изменение состояния теплотехнического оборудования ТЭЦ-2
+{
     if dmReports.adsrTEC2izm.State in [dsEdit, dsInsert] then
       dmReports.adsrTEC2izm.Cancel;
     if dmReports.adsrTEC2izm.Active then
@@ -1152,6 +1260,7 @@ begin
     dmReports.adsrTEC2izm.Open;
     if dmReports.adsrTEC2izm.IsEmpty then frVariables['adsrTEC2izmIsEmpty']:='no'
     else frVariables['adsrTEC2izmIsEmpty']:='';
+}
 // end изменение состояния теплотехнического оборудования ТЭЦ-2
 
 // begin отключения в сети 6-10 кВ
@@ -1250,6 +1359,7 @@ begin
    frVariables['frGenPlanMax'] :='';
    frVariables['frGenFactMax'] :='';
    frVariables['frPotrFactMax']:='';
+   frVariables['frPotrFactMin']:='';
    frVariables['frPotrPlanMax']:='';
 //   frVariables['frJobPowerPlan']:='';
 //   frVariables['frJobPowerFact']:='';
@@ -1278,6 +1388,7 @@ begin
      frVariables['frPotrFactMax']:=arrStr[2];
      frVariables['frPotrPlanMax']:=arrStr[3];
 //     frVariables['frJobPowerFact']:=arrStr[4];
+     frVariables['frPotrFactMin']:= GetMinAndHour(atiResMany[2]);
    finally
      tiTIMany := nil;
      arrStr := nil;
@@ -1287,6 +1398,7 @@ begin
 // end Данные из ОИК
 
 // begin Данные КомандАРМа
+{
     if dmData.adcComandARM.Connected then
     begin
       if dmReports.adsKomandARM.State in [dsEdit, dsInsert] then
@@ -1314,14 +1426,16 @@ begin
       dmReports.adsKomandARM.Open;
       frVariables['adsKomandARMIsEmpty']:='Нет подключения к базе КомандАРМа';
     end;
+}
 // end Данные КомандАРМа
 
 //todo : убрать GrefMes
 
-    frVariables['fradcComandARM']:=dmData.adcComandARM.Connected;
+//    frVariables['fradcComandARM']:=dmData.adcComandARM.Connected;
 //    frVariables['fradcGrafMes']:=dmData.adcGrafMes.Connected;
     //если лист пустой то последней подписи нет
-    frVariables['frLastPage']:=not (dmReports.adsrAOEO.IsEmpty and dmReports.adsKomandARM.IsEmpty);    
+//    frVariables['frLastPage']:=not (dmReports.adsrAOEO.IsEmpty and dmReports.adsKomandARM.IsEmpty);
+    frVariables['frLastPage']:=dmReports.adsrAOEO.IsEmpty;
     frVariables['frdate']:=FormatDateTime('dd.mm.yyyy',date);
 
 // begin вставка подписи
@@ -1386,8 +1500,6 @@ begin
       dmReports.adsrAotoObor.Close;
     if dmReports.adsrAO6_10.Active then
       dmReports.adsrAO6_10.Close;
-    if dmReports.adsKomandARM.Active then
-      dmReports.adsKomandARM.Close;
     if dmReports.adsrPodpis.Active then
       dmReports.adsrPodpis.Close;
     if dmReports.adsrPodpis.Active then
@@ -1456,7 +1568,7 @@ var
               DeleteFile(filesatt[i-1]);
         SetLength(filesatt,0);
         filesatt:=nil;
-        UpdateStatusBar();        
+        UpdateStatusBar();
       end
       else
         MessageDlg('Отчет не может быть создан. Письмо не отправлено.',mtError,[mbOk],0);
@@ -1832,8 +1944,9 @@ begin
     SetFnt(sbStatus.Panels[15],dt,2,aq);
   finally
     aq.Free;
-  end;  
+  end;
 end;
+
 
 procedure TfrmMain.FormActivate(Sender: TObject);
 begin

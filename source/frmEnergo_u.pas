@@ -174,6 +174,19 @@ type
     adsEnergoFactmorcem_sn: TFloatField;
     cxGrid2DBBandedTableView1Column1: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1Column2: TcxGridDBBandedColumn;
+    adsEnergoFacttecYA_v: TFloatField;
+    adsEnergoFacttecYA_sn: TFloatField;
+    cxGrid2DBBandedTableView1tecYA_v: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1tecYA_sn: TcxGridDBBandedColumn;
+    adsEnergoPlankoef_v_tecYA: TFloatField;
+    adsEnergoPlanvalue_v_tecYA: TFloatField;
+    cxGrid1DBBandedTableView1koef_v_tecYA: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1value_v_tecYA: TcxGridDBBandedColumn;
+    TBXSeparatorItem7: TTBXSeparatorItem;
+    TBXLabelItem15: TTBXLabelItem;
+    TBControlItem13: TTBControlItem;
+    seVyrYavas: TcxSpinEdit;
+    adsPlanParamparam_v_tecYA: TFloatField;
     procedure FormCreate(Sender: TObject);
     procedure adsEnergoFactCalcFields(DataSet: TDataSet);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -201,8 +214,11 @@ type
     procedure adsEnergoPlankoef_v_tecGTChange(Sender: TField);
     procedure seVyrMorcemPropertiesChange(Sender: TObject);
     procedure adsEnergoPlankoef_v_morcemChange(Sender: TField);
+    procedure seVyrYavasPropertiesChange(Sender: TObject);
+    procedure adsEnergoPlankoef_v_tecYAChange(Sender: TField);
+
   private
-    rVyrTEC2, rVyrTECGT, rVyrTEC4, rPotr, rVyrMorcem: Real;
+    rVyrTEC2, rVyrTECGT, rVyrTEC4, rPotr, rVyrMorcem, rVyrYavas: Real;
     bLocalLoged: Boolean;
   public
     procedure ReloadEnergoPlan(m,y: Integer);
@@ -363,6 +379,7 @@ begin
       rVyrTECGT:=0;
       rVyrTEC4:=0;
       rVyrMorcem:=0;
+      rVyrYavas:=0;
       rPotr:=0;
     end
     else
@@ -371,6 +388,7 @@ begin
       rVyrTECGT := adsPlanParamparam_v_tecGT.AsFloat;
       rVyrTEC4 := adsPlanParamparam_v_tec4.AsFloat;
       rVyrMorcem := adsPlanParamparam_v_morcem.AsFloat;
+      rVyrYavas := adsPlanParamparam_v_tecYA.AsFloat;
       rPotr := adsPlanParamparam_p.AsFloat;
     end;
     bLocalLoged := false;
@@ -378,8 +396,9 @@ begin
     seVyrTECGT.Value:=rVyrTECGT;
     seVyrTEC4.Value:=rVyrTEC4;
     seVyrMorcem.Value:=rVyrMorcem;
+    seVyrYavas.Value := rVyrYavas;
     sePotr.Value:=rPotr;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     bLocalLoged := true;
   finally
     adsPlanParam.EnableControls;
@@ -390,8 +409,8 @@ end;
 procedure TfrmEnergo.adsEnergoFactCalcFields(DataSet: TDataSet);
 begin
   inherited;
-  DataSet['it_potr']:=DataSet['tec2_v']+DataSet['tecGT_v']+DataSet['tec4_v']+DataSet['morcem_v']+DataSet['per_ryazan']+DataSet['per_penza']+DataSet['per_ylyan']+DataSet['per_chuv']+DataSet['per_nnov'];
-  DataSet['it_vyr']:=DataSet['tec2_v']+DataSet['tecGT_v']+DataSet['tec4_v']+DataSet['morcem_v'];
+  DataSet['it_potr']:=DataSet['tec2_v']+DataSet['tecGT_v']+DataSet['tec4_v']+DataSet['morcem_v']+DataSet['tecYA_v']+DataSet['per_ryazan']+DataSet['per_penza']+DataSet['per_ylyan']+DataSet['per_chuv']+DataSet['per_nnov'];
+  DataSet['it_vyr']:=DataSet['tec2_v']+DataSet['tecGT_v']+DataSet['tec4_v']+DataSet['morcem_v']+DataSet['tecYA_v'];
   DataSet['it_sal']:=DataSet['per_ryazan']+DataSet['per_penza']+DataSet['per_ylyan']+DataSet['per_chuv']+DataSet['per_nnov'];
 end;
 
@@ -477,6 +496,12 @@ begin
   adsEnergoPlanvalue_v_morcem.AsFloat := Round(adsEnergoPlankoef_v_morcem.AsFloat * rVyrMorcem / 100);
 end;
 
+procedure TfrmEnergo.adsEnergoPlankoef_v_tecYAChange(Sender: TField);
+begin
+  inherited;
+  adsEnergoPlanvalue_v_tecYA.AsFloat := Round(adsEnergoPlankoef_v_tecYA.AsFloat * rVyrYavas / 100);
+end;
+
 
 procedure TfrmEnergo.cxSpinEdit1PropertiesChange(Sender: TObject);
 var
@@ -509,7 +534,7 @@ begin
     adsEnergoPlan.GotoBookmark(b);
   finally
     bLocalLoged := bPreLog;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     adsEnergoPlan.FreeBookmark(b);
 //    cxGrid1.EndUpdate;
     adsEnergoPlan.EnableControls;
@@ -544,7 +569,7 @@ begin
     adsEnergoPlan.GotoBookmark(b);
   finally
     bLocalLoged := bPreLog;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     adsEnergoPlan.FreeBookmark(b);
 //    cxGrid1.EndUpdate;
     adsEnergoPlan.EnableControls;
@@ -588,7 +613,7 @@ begin
     adsEnergoPlan.GotoBookmark(b);
   finally
     bLocalLoged := bPreLog;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     adsEnergoPlan.FreeBookmark(b);
 //    cxGrid1.EndUpdate;
     adsEnergoPlan.EnableControls;
@@ -626,7 +651,7 @@ begin
     adsEnergoPlan.GotoBookmark(b);
   finally
     bLocalLoged := bPreLog;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     adsEnergoPlan.FreeBookmark(b);
     cxGrid1.EndUpdate;
     adsEnergoPlan.EnableControls;
@@ -654,7 +679,8 @@ begin
         1: adsEnergoPlankoef_v_tecGT.AsFloat := teValue.Value;
         2: adsEnergoPlankoef_v_tec4.AsFloat := teValue.Value;
         3: adsEnergoPlankoef_v_morcem.AsFloat := teValue.Value;
-        4: adsEnergoPlankoef_p.AsFloat      := teValue.Value;  
+        4: adsEnergoPlankoef_v_tecYA.AsFloat := teValue.Value;
+        5: adsEnergoPlankoef_p.AsFloat      := teValue.Value;
         end;
         adsEnergoPlan.Post;
       end;  
@@ -725,12 +751,54 @@ begin
     adsEnergoPlan.GotoBookmark(b);
   finally
     bLocalLoged := bPreLog;
-    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem);
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
     adsEnergoPlan.FreeBookmark(b);
     cxGrid1.EndUpdate;
     adsEnergoPlan.EnableControls;
   end;
 end;                 
+
+procedure TfrmEnergo.seVyrYavasPropertiesChange(Sender: TObject);
+var
+  b: TBookmark;
+  bPreLog: Boolean;
+begin
+  rVyrYavas:=VarAsType(seVyrYavas.Value,varDouble);
+  if adsPlanParam.State in [dsEdit, dsInsert] then
+    adsPlanParam.Cancel;
+  if not adsPlanParam.Active then
+    adsPlanParam.Open;
+  adsPlanParam.Edit;
+  adsPlanParamparam_v_tecYA.AsFloat:=rVyrYavas;
+  adsPlanParam.Post;
+  Application.ProcessMessages;
+  adsEnergoPlan.DisableControls;
+  cxGrid1.BeginUpdate;
+  b:=adsEnergoPlan.GetBookmark;
+  try
+    bPreLog:=bLocalLoged;
+    bLocalLoged := false;
+    adsEnergoPlan.First;
+    while not adsEnergoPlan.Eof do
+    begin
+      adsEnergoPlan.Edit;
+      adsEnergoPlanvalue_v_tecYA.AsFloat := Round( adsEnergoPlankoef_v_tecYA.AsFloat * rVyrYavas / 100);
+      adsEnergoPlan.Post;
+      adsEnergoPlan.Next;
+    end;
+    adsEnergoPlan.GotoBookmark(b);
+  finally
+    bLocalLoged := bPreLog;
+    teSaldo.Text := FloatToStr(rPotr-rVyrTEC2-rVyrTECGT-rVyrTEC4-rVyrMorcem-rVyrYavas);
+    adsEnergoPlan.FreeBookmark(b);
+    cxGrid1.EndUpdate;
+    adsEnergoPlan.EnableControls;
+  end;
+end;
+
+
+
+
 
 initialization
   RegisterClass(TfrmEnergo);

@@ -3,7 +3,7 @@ object dlgAbout: TdlgAbout
   Top = 268
   BorderStyle = bsDialog
   Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
-  ClientHeight = 176
+  ClientHeight = 186
   ClientWidth = 377
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -29,12 +29,12 @@ object dlgAbout: TdlgAbout
     StyleHot.LookAndFeel.Kind = lfOffice11
     StyleHot.LookAndFeel.NativeStyle = False
     TabOrder = 0
-    Height = 129
+    Height = 137
     Width = 361
   end
   object cxButton1: TcxButton
     Left = 292
-    Top = 144
+    Top = 152
     Width = 75
     Height = 25
     Cancel = True
@@ -1459,8 +1459,22 @@ object dlgAbout: TdlgAbout
     StyleHot.LookAndFeel.Kind = lfOffice11
     Transparent = True
   end
+  object cxHyperLinkEdit1: TcxHyperLinkEdit
+    Left = 32
+    Top = 117
+    Properties.Prefix = 'mailto:'
+    Style.BorderColor = clWindow
+    Style.BorderStyle = ebsSingle
+    Style.Edges = []
+    Style.HotTrack = True
+    Style.Shadow = False
+    Style.TextStyle = [fsBold, fsUnderline]
+    TabOrder = 10
+    Text = 'Filimonov.Vitaliy@gmail.com'
+    Width = 329
+  end
   object XPManifest1: TXPManifest
     Left = 192
-    Top = 144
+    Top = 152
   end
 end

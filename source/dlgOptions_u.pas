@@ -46,13 +46,9 @@ type
     Panel5: TPanel;
     cxLabel9: TcxLabel;
     cxVerticalGrid1CategoryRow1: TcxCategoryRow;
-    cxVerticalGrid1CategoryRow3: TcxCategoryRow;
     cxVerticalGrid1EditorRow1: TcxEditorRow;
     cxVerticalGrid1EditorRow2: TcxEditorRow;
     cxVerticalGrid1EditorRow3: TcxEditorRow;
-    cxVerticalGrid1EditorRow11: TcxEditorRow;
-    cxVerticalGrid1EditorRow14: TcxEditorRow;
-    cxVerticalGrid1EditorRow15: TcxEditorRow;
     cxButton3: TcxButton;
     dxNavBar1Item3: TdxNavBarItem;
     cxTabSheet4: TcxTabSheet;
@@ -145,8 +141,6 @@ type
     cxVerticalGrid5EditorRow1: TcxEditorRow;
     cxVerticalGrid1EditorRow4: TcxEditorRow;
     cxVerticalGrid1EditorRow5: TcxEditorRow;
-    cxVerticalGrid1EditorRow12: TcxEditorRow;
-    cxVerticalGrid1EditorRow13: TcxEditorRow;
     cxTabSheet6: TcxTabSheet;
     Panel10: TPanel;
     cxLabel11: TcxLabel;
@@ -194,12 +188,61 @@ type
     cxVerticalGrid4CategoryRow22: TcxCategoryRow;
     cxVerticalGrid4EditorRow37: TcxEditorRow;
     cxVerticalGrid4EditorRow38: TcxEditorRow;
+    cxVerticalGrid4CategoryRow23: TcxCategoryRow;
+    cxVerticalGrid4CategoryRow24: TcxCategoryRow;
+    cxVerticalGrid4EditorRow39: TcxEditorRow;
+    cxVerticalGrid4EditorRow40: TcxEditorRow;
+    cxVerticalGrid4CategoryRow25: TcxCategoryRow;
+    cxVerticalGrid4EditorRow41: TcxEditorRow;
+    cxVerticalGrid4EditorRow42: TcxEditorRow;
+    cxVerticalGrid4CategoryRow26: TcxCategoryRow;
+    cxVerticalGrid4EditorRow43: TcxEditorRow;
+    cxVerticalGrid4EditorRow44: TcxEditorRow;
+    cxVerticalGrid4CategoryRow27: TcxCategoryRow;
+    cxVerticalGrid4EditorRow45: TcxEditorRow;
+    cxVerticalGrid4EditorRow46: TcxEditorRow;
+    cxVerticalGrid4CategoryRow28: TcxCategoryRow;
+    cxVerticalGrid4EditorRow47: TcxEditorRow;
+    cxVerticalGrid4EditorRow48: TcxEditorRow;
+    cxVerticalGrid4CategoryRow29: TcxCategoryRow;
+    cxVerticalGrid4EditorRow49: TcxEditorRow;
+    cxVerticalGrid4EditorRow50: TcxEditorRow;
+    cxVerticalGrid4CategoryRow30: TcxCategoryRow;
+    cxVerticalGrid4EditorRow51: TcxEditorRow;
+    cxVerticalGrid4EditorRow52: TcxEditorRow;
+    cxVerticalGrid4CategoryRow31: TcxCategoryRow;
+    cxVerticalGrid4EditorRow53: TcxEditorRow;
+    cxVerticalGrid4EditorRow54: TcxEditorRow;
+    cxVerticalGrid4CategoryRow32: TcxCategoryRow;
+    cxVerticalGrid4EditorRow55: TcxEditorRow;
+    cxVerticalGrid4EditorRow56: TcxEditorRow;
+    cxVerticalGrid4CategoryRow33: TcxCategoryRow;
+    cxVerticalGrid4EditorRow57: TcxEditorRow;
+    cxVerticalGrid4EditorRow58: TcxEditorRow;
+    cxVerticalGrid4CategoryRow34: TcxCategoryRow;
+    cxVerticalGrid4EditorRow59: TcxEditorRow;
+    cxVerticalGrid4EditorRow60: TcxEditorRow;
+    cxVerticalGrid4CategoryRow35: TcxCategoryRow;
+    cxVerticalGrid4EditorRow61: TcxEditorRow;
+    cxVerticalGrid4EditorRow62: TcxEditorRow;
+    cxVerticalGrid4CategoryRow36: TcxCategoryRow;
+    cxVerticalGrid4EditorRow63: TcxEditorRow;
+    cxVerticalGrid4EditorRow64: TcxEditorRow;
+    cxVerticalGrid4CategoryRow37: TcxCategoryRow;
+    cxVerticalGrid4EditorRow65: TcxEditorRow;
+    cxVerticalGrid4EditorRow66: TcxEditorRow;
+    cxVerticalGrid4CategoryRow38: TcxCategoryRow;
+    cxVerticalGrid4EditorRow67: TcxEditorRow;
+    cxVerticalGrid4EditorRow68: TcxEditorRow;
+    cxVerticalGrid4CategoryRow39: TcxCategoryRow;
+    cxVerticalGrid4EditorRow69: TcxEditorRow;
+    cxVerticalGrid4EditorRow70: TcxEditorRow;
 
     procedure cxButton2Click(Sender: TObject);
     procedure cxVerticalGrid1EditorRow3EditPropertiesButtonClick(
       Sender: TObject; AButtonIndex: Integer);
-    procedure cxVerticalGrid1EditorRow14EditPropertiesButtonClick(
-      Sender: TObject; AButtonIndex: Integer);
+//    procedure cxVerticalGrid1EditorRow14EditPropertiesButtonClick(
+//      Sender: TObject; AButtonIndex: Integer);
     procedure cxButton3Click(Sender: TObject);
     procedure dxNavBar1Item1Click(Sender: TObject);
     procedure dxNavBar1Item2Click(Sender: TObject);
@@ -248,11 +291,13 @@ begin
   cxVerticalGrid1EditorRow5.Properties.Value:=mServersAccess[1].User;
   cxVerticalGrid1EditorRow4.Properties.Value:=mServersAccess[1].Password;
 
+  {
   cxVerticalGrid1EditorRow15.Properties.Value:=mServersAccess[2].Active;
   cxVerticalGrid1EditorRow11.Properties.Value:=mServersAccess[2].Name;
   cxVerticalGrid1EditorRow14.Properties.Value:=mServersAccess[2].NameDB;
   cxVerticalGrid1EditorRow13.Properties.Value:=mServersAccess[2].User;
   cxVerticalGrid1EditorRow12.Properties.Value:=mServersAccess[2].Password;
+  }
 
   cxEditorRow16.Properties.Value := mServersCK[1].Active;
   cxVerticalGrid6EditorRow1.Properties.Value := mServersCK[1].Name;
@@ -331,6 +376,40 @@ begin
   cxVerticalGrid4EditorRow38.Properties.Value := tiOIKGenTecMCPPBR.id;
   cxVerticalGrid4EditorRow37.Properties.Value := CatToNum(tiOIKGenTecMCPPBR.cat);
 
+
+  cxVerticalGrid4EditorRow39.Properties.Value := tiOIKPlanMinTec2.id;
+  cxVerticalGrid4EditorRow40.Properties.Value := CatToNum(tiOIKPlanMinTec2.cat);
+  cxVerticalGrid4EditorRow41.Properties.Value := tiOIKPlanMaxTec2.id;
+  cxVerticalGrid4EditorRow42.Properties.Value := CatToNum(tiOIKPlanMaxTec2.cat);
+  cxVerticalGrid4EditorRow43.Properties.Value := tiOIKFactTec2.id;
+  cxVerticalGrid4EditorRow44.Properties.Value := CatToNum(tiOIKFactTec2.cat);
+  cxVerticalGrid4EditorRow45.Properties.Value := tiOIKPlanMinTecGT.id;
+  cxVerticalGrid4EditorRow46.Properties.Value := CatToNum(tiOIKPlanMinTecGT.cat);
+  cxVerticalGrid4EditorRow47.Properties.Value := tiOIKPlanMaxTecGT.id;
+  cxVerticalGrid4EditorRow48.Properties.Value := CatToNum(tiOIKPlanMaxTecGT.cat);
+  cxVerticalGrid4EditorRow49.Properties.Value := tiOIKFactTecGT.id;
+  cxVerticalGrid4EditorRow50.Properties.Value := CatToNum(tiOIKFactTecGT.cat);
+  cxVerticalGrid4EditorRow51.Properties.Value := tiOIKPlanMinTecMC.id;
+  cxVerticalGrid4EditorRow52.Properties.Value := CatToNum(tiOIKPlanMinTecMC.cat);
+  cxVerticalGrid4EditorRow53.Properties.Value := tiOIKPlanMaxTecMC.id;
+  cxVerticalGrid4EditorRow54.Properties.Value := CatToNum(tiOIKPlanMaxTecMC.cat);
+  cxVerticalGrid4EditorRow55.Properties.Value := tiOIKFactTecMC.id;
+  cxVerticalGrid4EditorRow56.Properties.Value := CatToNum(tiOIKFactTecMC.cat);
+  cxVerticalGrid4EditorRow57.Properties.Value := tiOIKPlanMinTec4.id;
+  cxVerticalGrid4EditorRow58.Properties.Value := CatToNum(tiOIKPlanMinTec4.cat);
+  cxVerticalGrid4EditorRow59.Properties.Value := tiOIKPlanMaxTec4.id;
+  cxVerticalGrid4EditorRow60.Properties.Value := CatToNum(tiOIKPlanMaxTec4.cat);
+  cxVerticalGrid4EditorRow61.Properties.Value := tiOIKFactTec4.id;
+  cxVerticalGrid4EditorRow62.Properties.Value := CatToNum(tiOIKFactTec4.cat);
+  cxVerticalGrid4EditorRow63.Properties.Value := tiOIKPlanMinTecYa.id;
+  cxVerticalGrid4EditorRow64.Properties.Value := CatToNum(tiOIKPlanMinTecYa.cat);
+  cxVerticalGrid4EditorRow65.Properties.Value := tiOIKPlanMaxTecYa.id;
+  cxVerticalGrid4EditorRow66.Properties.Value := CatToNum(tiOIKPlanMaxTecYa.cat);
+  cxVerticalGrid4EditorRow67.Properties.Value := tiOIKFactTecYa.id;
+  cxVerticalGrid4EditorRow68.Properties.Value := CatToNum(tiOIKFactTecYa.cat);
+  cxVerticalGrid4EditorRow69.Properties.Value := tiOIKFactSumm.id;
+  cxVerticalGrid4EditorRow70.Properties.Value := CatToNum(tiOIKFactSumm.cat);
+
 {
 1  Телеизмерения	                      ТИ
 2  Телесигналы	                        ТС
@@ -367,12 +446,14 @@ begin
     mServersAccess[1].User:=VarToStr(cxVerticalGrid1EditorRow5.Properties.Value);
     mServersAccess[1].Password:=VarToStr(cxVerticalGrid1EditorRow4.Properties.Value);
 
+    {
     mServersAccess[2].Active:=cxVerticalGrid1EditorRow15.Properties.Value;
     mServersAccess[2].Name:=VarToStr(cxVerticalGrid1EditorRow11.Properties.Value);
     mServersAccess[2].NameDB:=VarToStr(cxVerticalGrid1EditorRow14.Properties.Value);
     mServersAccess[2].User:=VarToStr(cxVerticalGrid1EditorRow13.Properties.Value);
     mServersAccess[2].Password:=VarToStr(cxVerticalGrid1EditorRow12.Properties.Value);
-
+    }
+    
     mServersCK[1].Active := cxEditorRow16.Properties.Value;
     mServersCK[1].Name := VarToStr(cxVerticalGrid6EditorRow1.Properties.Value);
     mServersCK[1].Server_1 := VarToStr(cxEditorRow19.Properties.Value);
@@ -463,6 +544,39 @@ begin
     tiOIKGenTecMCPPBR.id := cxVerticalGrid4EditorRow38.Properties.Value;
     tiOIKGenTecMCPPBR.cat := NumToCat(cxVerticalGrid4EditorRow37.Properties.Value);
 
+    tiOIKPlanMinTec2.id := cxVerticalGrid4EditorRow39.Properties.Value;
+    tiOIKPlanMinTec2.cat := NumToCat(cxVerticalGrid4EditorRow40.Properties.Value);
+    tiOIKPlanMaxTec2.id := cxVerticalGrid4EditorRow41.Properties.Value;
+    tiOIKPlanMaxTec2.cat := NumToCat(cxVerticalGrid4EditorRow42.Properties.Value);
+    tiOIKFactTec2.id := cxVerticalGrid4EditorRow43.Properties.Value;
+    tiOIKFactTec2.cat := NumToCat(cxVerticalGrid4EditorRow44.Properties.Value);
+    tiOIKPlanMinTecGT.id := cxVerticalGrid4EditorRow45.Properties.Value;
+    tiOIKPlanMinTecGT.cat := NumToCat(cxVerticalGrid4EditorRow46.Properties.Value);
+    tiOIKPlanMaxTecGT.id := cxVerticalGrid4EditorRow47.Properties.Value;
+    tiOIKPlanMaxTecGT.cat :=  NumToCat(cxVerticalGrid4EditorRow48.Properties.Value);
+    tiOIKFactTecGT.id := cxVerticalGrid4EditorRow49.Properties.Value;
+    tiOIKFactTecGT.cat := NumToCat(cxVerticalGrid4EditorRow50.Properties.Value);
+    tiOIKPlanMinTecMC.id := cxVerticalGrid4EditorRow51.Properties.Value;
+    tiOIKPlanMinTecMC.cat := NumToCat(cxVerticalGrid4EditorRow52.Properties.Value);
+    tiOIKPlanMaxTecMC.id := cxVerticalGrid4EditorRow53.Properties.Value;
+    tiOIKPlanMaxTecMC.cat := NumToCat(cxVerticalGrid4EditorRow54.Properties.Value);
+    tiOIKFactTecMC.id := cxVerticalGrid4EditorRow55.Properties.Value;
+    tiOIKFactTecMC.cat := NumToCat(cxVerticalGrid4EditorRow56.Properties.Value);
+    tiOIKPlanMinTec4.id := cxVerticalGrid4EditorRow57.Properties.Value;
+    tiOIKPlanMinTec4.cat := NumToCat(cxVerticalGrid4EditorRow58.Properties.Value);
+    tiOIKPlanMaxTec4.id := cxVerticalGrid4EditorRow59.Properties.Value;
+    tiOIKPlanMaxTec4.cat := NumToCat(cxVerticalGrid4EditorRow60.Properties.Value);
+    tiOIKFactTec4.id := cxVerticalGrid4EditorRow61.Properties.Value;
+    tiOIKFactTec4.cat := NumToCat(cxVerticalGrid4EditorRow62.Properties.Value);
+    tiOIKPlanMinTecYa.id := cxVerticalGrid4EditorRow63.Properties.Value;
+    tiOIKPlanMinTecYa.cat := NumToCat(cxVerticalGrid4EditorRow64.Properties.Value);
+    tiOIKPlanMaxTecYa.id := cxVerticalGrid4EditorRow65.Properties.Value;
+    tiOIKPlanMaxTecYa.cat := NumToCat(cxVerticalGrid4EditorRow66.Properties.Value);
+    tiOIKFactTecYa.id := cxVerticalGrid4EditorRow67.Properties.Value;
+    tiOIKFactTecYa.cat := NumToCat(cxVerticalGrid4EditorRow68.Properties.Value);
+    tiOIKFactSumm.id := cxVerticalGrid4EditorRow69.Properties.Value;
+    tiOIKFactSumm.cat := NumToCat(cxVerticalGrid4EditorRow70.Properties.Value);
+
 
 {
     cxButton2.Enabled := false;
@@ -490,6 +604,7 @@ begin
   end;
 end;
 
+{
 procedure TdlgOptions.cxVerticalGrid1EditorRow14EditPropertiesButtonClick(
   Sender: TObject; AButtonIndex: Integer);
 begin
@@ -499,8 +614,9 @@ begin
   begin
      cxVerticalGrid1EditorRow14.Properties.Value := OpenDialog.FileName;
      (Sender as TcxButtonEdit).Text := OpenDialog.FileName;
-  end;   
+  end;
 end;
+}
 
 procedure TdlgOptions.cxButton3Click(Sender: TObject);
 begin

@@ -4,16 +4,17 @@ inherited frmTEC_4: TfrmTEC_4
   Width = 651
   Height = 378
   Caption = #1058#1069#1062' 4  ('#1056#1086#1084#1086#1076#1072#1085#1086#1074#1089#1072#1093#1072#1088')  '#1085#1072' 6:00'
+  OldCreateOrder = True
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   inherited sbarSimple: TTBXStatusBar
-    Top = 322
-    Width = 643
+    Top = 318
+    Width = 635
   end
   inherited TBXDock1: TTBXDock
-    Width = 643
+    Width = 635
     Height = 53
     object TBXToolbar1: TTBXToolbar
       Left = 0
@@ -55,7 +56,7 @@ inherited frmTEC_4: TfrmTEC_4
         OnClick = TBXItem2Click
       end
       object cbiMonth: TcxComboBox
-        Left = 41
+        Left = 46
         Top = 1
         Properties.DropDownListStyle = lsFixedList
         Properties.DropDownRows = 12
@@ -72,7 +73,7 @@ inherited frmTEC_4: TfrmTEC_4
         Width = 98
       end
       object seiYear: TcxSpinEdit
-        Left = 168
+        Left = 173
         Top = 1
         Properties.MinValue = 1.000000000000000000
         Properties.OnChange = TBXItem1Click
@@ -91,7 +92,7 @@ inherited frmTEC_4: TfrmTEC_4
       Caption = #1052#1077#1085#1102' '#1058#1069#1062'-2'
       CloseButton = False
       ClientAreaHeight = 21
-      ClientAreaWidth = 633
+      ClientAreaWidth = 625
       DockableTo = [dpTop]
       DockMode = dmCannotFloat
       DockPos = 0
@@ -115,23 +116,23 @@ inherited frmTEC_4: TfrmTEC_4
     end
   end
   inherited TBXDock2: TTBXDock
-    Top = 313
-    Width = 643
+    Top = 309
+    Width = 635
   end
   inherited TBXDock3: TTBXDock
     Top = 53
-    Height = 260
+    Height = 256
   end
   inherited TBXDock4: TTBXDock
-    Left = 634
+    Left = 626
     Top = 53
-    Height = 260
+    Height = 256
   end
   object cxGrid1: TcxGrid [5]
     Left = 9
     Top = 53
-    Width = 625
-    Height = 260
+    Width = 617
+    Height = 256
     Align = alClient
     TabOrder = 5
     LookAndFeel.Kind = lfOffice11
@@ -207,6 +208,16 @@ inherited frmTEC_4: TfrmTEC_4
         Position.ColIndex = 0
         Position.RowIndex = 0
       end
+      object cxGrid1DBBandedTableView1Column2: TcxGridDBBandedColumn
+        Caption = #1043' 2'
+        DataBinding.FieldName = 'g2'
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Width = 100
+        Position.BandIndex = 1
+        Position.ColIndex = 1
+        Position.RowIndex = 0
+      end
       object cxGrid1DBBandedTableView1gen: TcxGridDBBandedColumn
         Caption = #1052#1042#1090
         DataBinding.FieldName = 'gen'
@@ -276,6 +287,10 @@ inherited frmTEC_4: TfrmTEC_4
     end
     object adsTec4g1: TWideStringField
       FieldName = 'g1'
+      Size = 50
+    end
+    object adsTec4g2: TWideStringField
+      FieldName = 'g2'
       Size = 50
     end
   end

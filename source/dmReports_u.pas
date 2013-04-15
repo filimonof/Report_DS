@@ -72,18 +72,6 @@ type
     adsrAOEOZashname: TWideStringField;
     frAOEOOborud: TfrDBDataSet;
     frAOEOZash: TfrDBDataSet;
-    adsKomandARM: TADODataSet;
-    frKomandARM: TfrDBDataSet;
-    adsKomandARMRecID: TAutoIncField;
-    adsKomandARMReg_time: TDateTimeField;
-    adsKomandARMObject_name: TWideStringField;
-    adsKomandARMCommand: TWideStringField;
-    adsKomandARMExt_initiative: TBooleanField;
-    adsKomandARMFrom_minute: TDateTimeField;
-    adsKomandARMTo_minute: TDateTimeField;
-    adsKomandARMdescription: TWideStringField;
-    adsKomandARMExtended_cause: TWideStringField;
-    adsKomandARMSurname: TWideStringField;
     cdsAOEO: TClientDataSet;
     cdsAOEOID: TIntegerField;
     cdsAOEOoborud: TMemoField;
@@ -95,7 +83,6 @@ type
     adsrPodpisid: TAutoIncField;
     adsfPodpis: TfrDBDataSet;
     adsrPodpispodpis: TBlobField;
-    adsKomandARMValue: TIntegerField;
     adsrAOEOlkz: TMemoField;
     adsrAOEORPV2: TIntegerField;
     adsrAOEOcomment: TMemoField;

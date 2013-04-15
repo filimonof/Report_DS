@@ -1,6 +1,6 @@
 object frmSimple: TfrmSimple
-  Left = 316
-  Top = 300
+  Left = 197
+  Top = 223
   Width = 562
   Height = 347
   Caption = 'frmSimple'
@@ -21,8 +21,8 @@ object frmSimple: TfrmSimple
   TextHeight = 13
   object sbarSimple: TTBXStatusBar
     Left = 0
-    Top = 291
-    Width = 554
+    Top = 287
+    Width = 546
     Panels = <>
     UseSystemFont = False
     Visible = False
@@ -30,13 +30,13 @@ object frmSimple: TfrmSimple
   object TBXDock1: TTBXDock
     Left = 0
     Top = 0
-    Width = 554
+    Width = 546
     Height = 9
   end
   object TBXDock2: TTBXDock
     Left = 0
-    Top = 282
-    Width = 554
+    Top = 278
+    Width = 546
     Height = 9
     Position = dpBottom
   end
@@ -44,14 +44,14 @@ object frmSimple: TfrmSimple
     Left = 0
     Top = 9
     Width = 9
-    Height = 273
+    Height = 269
     Position = dpLeft
   end
   object TBXDock4: TTBXDock
-    Left = 545
+    Left = 537
     Top = 9
     Width = 9
-    Height = 273
+    Height = 269
     Position = dpRight
   end
   object ilSmallIcons: TTBImageList

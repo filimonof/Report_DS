@@ -44,6 +44,8 @@ type
     cxGrid1DBBandedTableView1gaz_p: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn;
     adsTec4g1: TWideStringField;
+    adsTec4g2: TWideStringField;
+    cxGrid1DBBandedTableView1Column2: TcxGridDBBandedColumn;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure TBXItem2Click(Sender: TObject);

@@ -7,7 +7,7 @@ uses ck7GetData;
 const
   NAME_PROGRAM = 'Рапортичка (сводные данные)';
   NAME_PROGRAM_SMALL = 'Рапортичка';
-  VERSION_PROGRAM = '4.3.3';
+  VERSION_PROGRAM = '4.4';
 
   INT_ENABLED = 1;
   INT_DISABLED = 0;
@@ -180,6 +180,24 @@ var
   tiOIKPotrPPBR:     TTI = (id: 1;    cat: ckPL);
   tiOIKSaldoPPBR:    TTI = (id: 6;    cat: ckPL);
   tiOIKGenTecMCPPBR: TTI = (id: 56;    cat: ckPCHAS);
+
+  tiOIKPlanMinTec2:  TTI = (id:   41;    cat: ckPL);
+  tiOIKPlanMaxTec2:  TTI = (id:   44;    cat: ckPL);
+  tiOIKFactTec2:     TTI = (id: 4630;    cat: ckPV);
+  tiOIKPlanMinTecGT: TTI = (id:   67;    cat: ckPL);
+  tiOIKPlanMaxTecGT: TTI = (id:   68;    cat: ckPL);
+  tiOIKFactTecGT:    TTI = (id: 4620;    cat: ckPV);
+  tiOIKPlanMinTecMC: TTI = (id:  283;    cat: ckPL);
+  tiOIKPlanMaxTecMC: TTI = (id:  284;    cat: ckPL);
+  tiOIKFactTecMC:    TTI = (id: 4491;    cat: ckPV);
+  tiOIKPlanMinTec4:  TTI = (id:   40;    cat: ckPL);
+  tiOIKPlanMaxTec4:  TTI = (id:   43;    cat: ckPL);
+  tiOIKFactTec4:     TTI = (id: 4611;    cat: ckPV);
+  tiOIKPlanMinTecYa: TTI = (id:    0;    cat: ckPL);
+  tiOIKPlanMaxTecYa: TTI = (id:    0;    cat: ckPL);
+  tiOIKFactTecYa:    TTI = (id: 1891;    cat: ckPV);
+  tiOIKFactSumm:     TTI = (id: 4498;    cat: ckPV);
+
 
   mWeekDay: array[1..7] of string = (
     'Понедельник',

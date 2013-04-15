@@ -44,7 +44,8 @@ uses
   frmNarushPoryd_u in 'frmNarushPoryd_u.pas' {frmNarushPoryd},
   ck7GetData in 'ck7GetData\ck7GetData.pas',
   frmTEC_MC_u in 'frmTEC_MC_u.pas' {frmTEC_MC},
-  frmTEC_4_u in 'frmTEC_4_u.pas' {frmTEC_4};
+  frmTEC_4_u in 'frmTEC_4_u.pas' {frmTEC_4},
+  frmTEC_YA_u in 'frmTEC_YA_u.pas' {frmTEC_YA};
 
 {$R *.res}
 

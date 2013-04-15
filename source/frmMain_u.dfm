@@ -1,8 +1,8 @@
 object frmMain: TfrmMain
-  Left = 274
-  Top = 144
+  Left = 363
+  Top = 118
   Width = 990
-  Height = 752
+  Height = 750
   Caption = #1056#1077#1087#1082#1072' ('#1089#1074#1086#1076#1085#1099#1077' '#1076#1072#1085#1085#1099#1077')'
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -21,7 +21,7 @@ object frmMain: TfrmMain
   TextHeight = 13
   object sbStatus: TTBXStatusBar
     Left = 0
-    Top = 692
+    Top = 690
     Width = 974
     Images = ilMenu
     Panels = <
@@ -169,17 +169,29 @@ object frmMain: TfrmMain
         object TBXItem11: TTBXItem
           Action = aMazut
         end
+        object TBXItem21: TTBXItem
+          Action = aTEC2izm
+        end
+        object TBXItem5: TTBXItem
+          Action = aCtrlU
+        end
         object TBXItem12: TTBXItem
           Action = aTEC2
         end
-        object TBXItem21: TTBXItem
-          Action = aTEC2izm
+        object TBXItem28: TTBXItem
+          Action = aTEC_MC
+        end
+        object TBXItem27: TTBXItem
+          Action = aTEC_4
         end
         object TBXItem24: TTBXItem
           Action = aTEC_GT
         end
-        object TBXItem5: TTBXItem
-          Action = aCtrlU
+        object TBXItem26: TTBXItem
+          Action = aTEC_YA
+        end
+        object TBXItem25: TTBXItem
+          Action = aNarushPorud
         end
         object TBXSubmenuItem6: TTBXSubmenuItem
           Caption = #1040#1074#1072#1088#1080#1081#1085#1099#1077' '#1086#1090#1082#1083#1102#1095#1077#1085#1080#1103
@@ -199,9 +211,6 @@ object frmMain: TfrmMain
           object TBXItem23: TTBXItem
             Action = aOtkl110
           end
-        end
-        object TBXItem25: TTBXItem
-          Action = aNarushPorud
         end
       end
       object TBXSubmenuItem8: TTBXSubmenuItem
@@ -242,7 +251,7 @@ object frmMain: TfrmMain
   end
   object TBXDock2: TTBXDock
     Left = 0
-    Top = 683
+    Top = 681
     Width = 974
     Height = 9
     Position = dpBottom
@@ -251,7 +260,7 @@ object frmMain: TfrmMain
     Left = 0
     Top = 25
     Width = 240
-    Height = 658
+    Height = 656
     Position = dpLeft
     object TBXDockablePanel1: TTBXDockablePanel
       Left = 0
@@ -266,7 +275,7 @@ object frmMain: TfrmMain
         Left = 0
         Top = 0
         Width = 236
-        Height = 636
+        Height = 634
         Align = alClient
         ActiveGroupIndex = 0
         DefaultStyles.Item.BackColor = clWhite
@@ -327,6 +336,9 @@ object frmMain: TfrmMain
             end
             item
               Item = nbMainItem16
+            end
+            item
+              Item = nbMainItem22
             end
             item
               Item = nbMainItem17
@@ -453,6 +465,9 @@ object frmMain: TfrmMain
         object nbMainItem19: TdxNavBarItem
           Action = aTEC_4
         end
+        object nbMainItem22: TdxNavBarItem
+          Action = aTEC_YA
+        end
       end
     end
   end
@@ -460,7 +475,7 @@ object frmMain: TfrmMain
     Left = 965
     Top = 25
     Width = 9
-    Height = 658
+    Height = 656
     Position = dpRight
   end
   object TBXSwitcher1: TTBXSwitcher
@@ -714,6 +729,7 @@ object frmMain: TfrmMain
     object aRepForm: TAction
       Category = 'Work'
       Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1092#1086#1088#1084#1072#1084
+      Enabled = False
       OnExecute = aExecute
     end
     object aAO6_10: TAction
@@ -754,6 +770,11 @@ object frmMain: TfrmMain
     object aTEC_4: TAction
       Category = 'Work'
       Caption = #1058#1069#1062' 4 '#1085#1072' 6:00'
+      OnExecute = aExecute
+    end
+    object aTEC_YA: TAction
+      Category = 'Work'
+      Caption = #1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103' '#1085#1072' 6:00'
       OnExecute = aExecute
     end
   end

@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, cxLookAndFeelPainters, StdCtrls, cxButtons, cxControls,
-  cxContainer, cxEdit, cxImage, cxLabel, XPMan, Menus;
+  cxContainer, cxEdit, cxImage, cxLabel, XPMan, Menus, cxTextEdit,
+  cxHyperLinkEdit;
 
 type
   TdlgAbout = class(TForm)
@@ -20,6 +21,7 @@ type
     cxLabel6: TcxLabel;
     cxLabel7: TcxLabel;
     XPManifest1: TXPManifest;
+    cxHyperLinkEdit1: TcxHyperLinkEdit;
   private
     { Private declarations }
   public

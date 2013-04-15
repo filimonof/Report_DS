@@ -1,6 +1,6 @@
 object dlgOptions: TdlgOptions
-  Left = 512
-  Top = 280
+  Left = 811
+  Top = 124
   Width = 644
   Height = 420
   BorderIcons = []
@@ -19,8 +19,8 @@ object dlgOptions: TdlgOptions
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 636
-    Height = 386
+    Width = 628
+    Height = 382
     Align = alClient
     BevelInner = bvLowered
     TabOrder = 0
@@ -31,7 +31,7 @@ object dlgOptions: TdlgOptions
       Align = alTop
       TabOrder = 0
       Height = 47
-      Width = 632
+      Width = 624
     end
     object cxImage2: TcxImage
       Left = 15
@@ -1445,14 +1445,14 @@ object dlgOptions: TdlgOptions
     end
     object Panel2: TPanel
       Left = 2
-      Top = 340
-      Width = 632
+      Top = 336
+      Width = 624
       Height = 44
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 3
       DesignSize = (
-        632
+        624
         44)
       object Bevel1: TBevel
         Left = 8
@@ -1573,7 +1573,7 @@ object dlgOptions: TdlgOptions
       Left = 2
       Top = 49
       Width = 215
-      Height = 291
+      Height = 287
       Align = alLeft
       ActiveGroupIndex = 0
       DragCopyCursor = -1119
@@ -1689,7 +1689,7 @@ object dlgOptions: TdlgOptions
       Left = 217
       Top = 49
       Width = 8
-      Height = 291
+      Height = 287
       HotZoneClassName = 'TcxXPTaskBarStyle'
       Control = dxNavBar1
       Color = clBtnFace
@@ -1698,14 +1698,14 @@ object dlgOptions: TdlgOptions
     object cxPageControl1: TcxPageControl
       Left = 225
       Top = 49
-      Width = 409
-      Height = 291
+      Width = 401
+      Height = 287
       ActivePage = cxTabSheet1
       Align = alClient
       HideTabs = True
       TabOrder = 6
-      ClientRectBottom = 291
-      ClientRectRight = 409
+      ClientRectBottom = 287
+      ClientRectRight = 401
       ClientRectTop = 0
       object cxTabSheet1: TcxTabSheet
         Caption = 'cxTabSheet1'
@@ -1713,7 +1713,7 @@ object dlgOptions: TdlgOptions
         object Panel3: TPanel
           Left = 0
           Top = 0
-          Width = 409
+          Width = 401
           Height = 33
           Align = alTop
           BevelOuter = bvNone
@@ -1727,8 +1727,8 @@ object dlgOptions: TdlgOptions
         object cxVerticalGrid1: TcxVerticalGrid
           Left = 0
           Top = 33
-          Width = 409
-          Height = 258
+          Width = 401
+          Height = 254
           Align = alClient
           LookAndFeel.NativeStyle = False
           OptionsView.RowHeaderWidth = 172
@@ -1765,44 +1765,6 @@ object dlgOptions: TdlgOptions
               Properties.Value = Null
             end
             object cxVerticalGrid1EditorRow4: TcxEditorRow
-              Properties.Caption = #1055#1072#1088#1086#1083#1100
-              Properties.EditPropertiesClassName = 'TcxTextEditProperties'
-              Properties.EditProperties.EchoMode = eemPassword
-              Properties.DataBinding.ValueType = 'String'
-              Properties.Value = Null
-            end
-          end
-          object cxVerticalGrid1CategoryRow3: TcxCategoryRow
-            Properties.Caption = #1041#1072#1079#1072' '#1076#1072#1085#1085#1099#1093' '#1050#1086#1084#1072#1085#1076#1040#1088#1084
-            object cxVerticalGrid1EditorRow15: TcxEditorRow
-              Properties.Caption = #1048#1089#1087#1086#1083#1100#1079#1091#1077#1090#1089#1103
-              Properties.EditPropertiesClassName = 'TcxCheckBoxProperties'
-              Properties.DataBinding.ValueType = 'Boolean'
-              Properties.Value = Null
-            end
-            object cxVerticalGrid1EditorRow11: TcxEditorRow
-              Properties.Caption = #1053#1072#1079#1074#1072#1085#1080#1077
-              Properties.DataBinding.ValueType = 'String'
-              Properties.Value = Null
-            end
-            object cxVerticalGrid1EditorRow14: TcxEditorRow
-              Properties.Caption = #1060#1072#1081#1083
-              Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-              Properties.EditProperties.Buttons = <
-                item
-                  Default = True
-                  Kind = bkEllipsis
-                end>
-              Properties.EditProperties.OnButtonClick = cxVerticalGrid1EditorRow14EditPropertiesButtonClick
-              Properties.DataBinding.ValueType = 'String'
-              Properties.Value = ''
-            end
-            object cxVerticalGrid1EditorRow13: TcxEditorRow
-              Properties.Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
-              Properties.DataBinding.ValueType = 'String'
-              Properties.Value = Null
-            end
-            object cxVerticalGrid1EditorRow12: TcxEditorRow
               Properties.Caption = #1055#1072#1088#1086#1083#1100
               Properties.EditPropertiesClassName = 'TcxTextEditProperties'
               Properties.EditProperties.EchoMode = eemPassword
@@ -1902,7 +1864,7 @@ object dlgOptions: TdlgOptions
         object Panel5: TPanel
           Left = 0
           Top = 0
-          Width = 409
+          Width = 401
           Height = 33
           Align = alTop
           BevelOuter = bvNone
@@ -1916,8 +1878,8 @@ object dlgOptions: TdlgOptions
         object cxVerticalGrid3: TcxVerticalGrid
           Left = 0
           Top = 33
-          Width = 409
-          Height = 225
+          Width = 401
+          Height = 221
           Align = alClient
           LookAndFeel.NativeStyle = False
           OptionsView.RowHeaderWidth = 181
@@ -1981,8 +1943,8 @@ object dlgOptions: TdlgOptions
         end
         object Panel8: TPanel
           Left = 0
-          Top = 258
-          Width = 409
+          Top = 254
+          Width = 401
           Height = 33
           Align = alBottom
           BevelOuter = bvNone
@@ -2005,7 +1967,7 @@ object dlgOptions: TdlgOptions
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 409
+          Width = 401
           Height = 33
           Align = alTop
           BevelOuter = bvNone
@@ -2019,8 +1981,8 @@ object dlgOptions: TdlgOptions
         object cxVerticalGrid4: TcxVerticalGrid
           Left = 0
           Top = 33
-          Width = 409
-          Height = 258
+          Width = 401
+          Height = 254
           Align = alClient
           OptionsView.RowHeaderWidth = 155
           TabOrder = 1
@@ -2043,6 +2005,440 @@ object dlgOptions: TdlgOptions
               Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
               Properties.DataBinding.ValueType = 'Integer'
               Properties.Value = Null
+            end
+          end
+          object cxVerticalGrid4CategoryRow23: TcxCategoryRow
+            Properties.Caption = #1043#1077#1085#1077#1088#1072#1094#1080#1103' '#1087#1086#1076#1089#1090#1072#1085#1094#1080#1081
+            object cxVerticalGrid4CategoryRow24: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1048#1053' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1058#1069#1062'-2'
+              object cxVerticalGrid4EditorRow39: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow40: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow25: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1040#1050#1057' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1058#1069#1062'-2'
+              object cxVerticalGrid4EditorRow41: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow42: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow26: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1090' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1058#1069#1062'-2'
+              object cxVerticalGrid4EditorRow43: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow44: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow27: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1048#1053' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1043#1058' '#1058#1069#1062
+              object cxVerticalGrid4EditorRow45: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow46: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow28: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1040#1050#1057' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1043#1058' '#1058#1069#1062
+              object cxVerticalGrid4EditorRow47: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow48: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow29: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1090' '#1057#1072#1088#1072#1085#1089#1082#1072#1103' '#1043#1058' '#1058#1069#1062
+              object cxVerticalGrid4EditorRow49: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow50: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow30: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1048#1053' '#1058#1069#1062' '#1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
+              object cxVerticalGrid4EditorRow51: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow52: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow31: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1040#1050#1057' '#1058#1069#1062' '#1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
+              object cxVerticalGrid4EditorRow53: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow54: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow32: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1090' '#1058#1069#1062' '#1052#1086#1088#1076#1086#1074#1094#1077#1084#1077#1085#1090
+              object cxVerticalGrid4EditorRow55: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow56: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow33: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1048#1053' '#1056#1086#1084#1086#1076#1072#1085#1086#1074#1089#1082#1072#1103' '#1058#1069#1062'-4'
+              object cxVerticalGrid4EditorRow57: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow58: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow34: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1040#1050#1057' '#1056#1086#1084#1086#1076#1072#1085#1086#1074#1089#1082#1072#1103' '#1058#1069#1062'-4'
+              object cxVerticalGrid4EditorRow59: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow60: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1080#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow35: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1089' '#1056#1086#1084#1086#1076#1072#1085#1086#1074#1089#1082#1072#1103' '#1058#1069#1062'-4'
+              object cxVerticalGrid4EditorRow61: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow62: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow36: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1048#1053' '#1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
+              object cxVerticalGrid4EditorRow63: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow64: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow37: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1083#1072#1085' '#1052#1040#1050#1057' '#1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
+              object cxVerticalGrid4EditorRow65: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow66: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow38: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1090' '#1043#1058#1069#1057' '#1071#1074#1072#1089#1089#1082#1072#1103
+              object cxVerticalGrid4EditorRow67: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow68: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow39: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1060#1072#1082#1090' '#1054#1073#1097#1072#1103
+              object cxVerticalGrid4EditorRow69: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow70: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+            end
+          end
+          object cxVerticalGrid4CategoryRow6: TcxCategoryRow
+            Properties.Caption = #1053#1072#1087#1088#1103#1078#1077#1085#1080#1077' '#1074' '#1082#1086#1085#1090#1088#1086#1083#1100#1085#1099#1093' '#1090#1086#1095#1082#1072#1093
+            object cxVerticalGrid4CategoryRow11: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1057' '#1057#1072#1088#1072#1085#1089#1082#1072#1103
+              object cxVerticalGrid4EditorRow12: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow11: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow7: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1057' '#1056#1091#1079#1072#1077#1074#1082#1072
+              object cxVerticalGrid4EditorRow13: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow14: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow8: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1057' '#1050#1086#1084#1089#1086#1084#1086#1083#1100#1089#1082#1072#1103
+              object cxVerticalGrid4EditorRow15: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow16: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow9: TcxCategoryRow
+              Expanded = False
+              Properties.Caption = #1055#1057' '#1052#1086#1082#1096#1072
+              object cxVerticalGrid4EditorRow18: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow17: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'Integer'
+                Properties.Value = Null
+              end
+            end
+            object cxVerticalGrid4CategoryRow14: TcxCategoryRow
+              Expanded = False
+              Height = 19
+              Properties.Caption = #1058#1069#1062' - 2'
+              object cxVerticalGrid4EditorRow23: TcxEditorRow
+                Properties.Caption = #1058#1048
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
+              object cxVerticalGrid4EditorRow24: TcxEditorRow
+                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
+                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
+                Properties.EditProperties.Buttons = <
+                  item
+                    Default = True
+                    Kind = bkEllipsis
+                  end>
+                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
+                Properties.DataBinding.ValueType = 'String'
+                Properties.Value = Null
+              end
             end
           end
           object cxVerticalGrid4CategoryRow10: TcxCategoryRow
@@ -2170,115 +2566,6 @@ object dlgOptions: TdlgOptions
                   end>
                 Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
                 Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-            end
-          end
-          object cxVerticalGrid4CategoryRow6: TcxCategoryRow
-            Properties.Caption = #1053#1072#1087#1088#1103#1078#1077#1085#1080#1077' '#1074' '#1082#1086#1085#1090#1088#1086#1083#1100#1085#1099#1093' '#1090#1086#1095#1082#1072#1093
-            object cxVerticalGrid4CategoryRow11: TcxCategoryRow
-              Expanded = False
-              Properties.Caption = #1055#1057' '#1057#1072#1088#1072#1085#1089#1082#1072#1103
-              object cxVerticalGrid4EditorRow12: TcxEditorRow
-                Properties.Caption = #1058#1048
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-              object cxVerticalGrid4EditorRow11: TcxEditorRow
-                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
-                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-                Properties.EditProperties.Buttons = <
-                  item
-                    Default = True
-                    Kind = bkEllipsis
-                  end>
-                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-            end
-            object cxVerticalGrid4CategoryRow7: TcxCategoryRow
-              Expanded = False
-              Properties.Caption = #1055#1057' '#1056#1091#1079#1072#1077#1074#1082#1072
-              object cxVerticalGrid4EditorRow13: TcxEditorRow
-                Properties.Caption = #1058#1048
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-              object cxVerticalGrid4EditorRow14: TcxEditorRow
-                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
-                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-                Properties.EditProperties.Buttons = <
-                  item
-                    Default = True
-                    Kind = bkEllipsis
-                  end>
-                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-            end
-            object cxVerticalGrid4CategoryRow8: TcxCategoryRow
-              Expanded = False
-              Properties.Caption = #1055#1057' '#1050#1086#1084#1089#1086#1084#1086#1083#1100#1089#1082#1072#1103
-              object cxVerticalGrid4EditorRow15: TcxEditorRow
-                Properties.Caption = #1058#1048
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-              object cxVerticalGrid4EditorRow16: TcxEditorRow
-                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
-                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-                Properties.EditProperties.Buttons = <
-                  item
-                    Default = True
-                    Kind = bkEllipsis
-                  end>
-                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-            end
-            object cxVerticalGrid4CategoryRow9: TcxCategoryRow
-              Expanded = False
-              Properties.Caption = #1055#1057' '#1052#1086#1082#1096#1072
-              object cxVerticalGrid4EditorRow18: TcxEditorRow
-                Properties.Caption = #1058#1048
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-              object cxVerticalGrid4EditorRow17: TcxEditorRow
-                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
-                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-                Properties.EditProperties.Buttons = <
-                  item
-                    Default = True
-                    Kind = bkEllipsis
-                  end>
-                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
-                Properties.DataBinding.ValueType = 'Integer'
-                Properties.Value = Null
-              end
-            end
-            object cxVerticalGrid4CategoryRow14: TcxCategoryRow
-              Expanded = False
-              Height = 19
-              Properties.Caption = #1058#1069#1062' - 2'
-              object cxVerticalGrid4EditorRow23: TcxEditorRow
-                Properties.Caption = #1058#1048
-                Properties.DataBinding.ValueType = 'String'
-                Properties.Value = Null
-              end
-              object cxVerticalGrid4EditorRow24: TcxEditorRow
-                Properties.Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103
-                Properties.EditPropertiesClassName = 'TcxButtonEditProperties'
-                Properties.EditProperties.Buttons = <
-                  item
-                    Default = True
-                    Kind = bkEllipsis
-                  end>
-                Properties.EditProperties.OnButtonClick = cxVerticalGrid4EditorRow1EditPropertiesButtonClick
-                Properties.DataBinding.ValueType = 'String'
                 Properties.Value = Null
               end
             end
@@ -2441,7 +2728,7 @@ object dlgOptions: TdlgOptions
         object Panel7: TPanel
           Left = 0
           Top = 0
-          Width = 409
+          Width = 401
           Height = 33
           Align = alTop
           BevelOuter = bvNone
@@ -2455,8 +2742,8 @@ object dlgOptions: TdlgOptions
         object cxVerticalGrid2: TcxVerticalGrid
           Left = 0
           Top = 33
-          Width = 409
-          Height = 225
+          Width = 401
+          Height = 221
           Align = alClient
           LookAndFeel.NativeStyle = False
           OptionsView.RowHeaderWidth = 181
@@ -2520,8 +2807,8 @@ object dlgOptions: TdlgOptions
         end
         object Panel9: TPanel
           Left = 0
-          Top = 258
-          Width = 409
+          Top = 254
+          Width = 401
           Height = 33
           Align = alBottom
           BevelOuter = bvNone
