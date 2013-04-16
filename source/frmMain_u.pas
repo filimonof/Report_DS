@@ -430,6 +430,30 @@ begin
     frVariables['frOIKFactTecYa']:='0';
     frVariables['frOIKFactSumm']:='0';
 
+      frVariables['frOIKPlanMinTec2']:='0';
+      frVariables['frOIKFactMinTec2']:='0';
+      frVariables['frOIKPlanMinTecGT']:='0';
+      frVariables['frOIKFactMinTecGT']:='0';
+      frVariables['frOIKPlanMinTecMC']:='0';
+      frVariables['frOIKFactMinTecMC']:='0';
+      frVariables['frOIKPlanMinTec4']:='0';
+      frVariables['frOIKFactMinTec4']:='0';
+      frVariables['frOIKPlanMinTecYa']:='0';
+      frVariables['frOIKFactMinTecYa']:='0';
+      frVariables['frOIKFactMinSumm']:='0';
+
+      frVariables['frOIKPlanMaxTec2']:='0';
+      frVariables['frOIKFactMaxTec2']:='0';
+      frVariables['frOIKPlanMaxTecGT']:='0';
+      frVariables['frOIKFactMaxTecGT']:='0';
+      frVariables['frOIKPlanMaxTecMC']:='0';
+      frVariables['frOIKFactMaxTecMC']:='0';
+      frVariables['frOIKPlanMaxTec4']:='0';
+      frVariables['frOIKFactMaxTec4']:='0';
+      frVariables['frOIKPlanMaxTecYa']:='0';
+      frVariables['frOIKFactMaxTecYa']:='0';
+      frVariables['frOIKFactMaxSumm']:='0';
+
 
     if mServersCK[1].Pclass.Connected then
     try
